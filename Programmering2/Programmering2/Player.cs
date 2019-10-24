@@ -16,6 +16,11 @@ namespace Programmering2
 
         public override void Update()
         {
+            Move();
+        }
+
+        private void Move()
+        {
             if (Keyboard.GetState().IsKeyDown(Keys.D))
                 position.X += speed;
             else if (Keyboard.GetState().IsKeyDown(Keys.A))

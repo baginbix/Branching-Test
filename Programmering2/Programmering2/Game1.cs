@@ -22,6 +22,7 @@ namespace Programmering2
         Texture2D pixel;
         GameState gameState = GameState.Start;
         List<BasKlass> objekt = new List<BasKlass>();
+        Player player;
 
         /// <summary>
         /// Metod som skapar en pixel
@@ -88,7 +89,9 @@ namespace Programmering2
                 if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                     ChangeGameState(GameState.Game);
             }
-            else if(gameState == GameState.Game) { }
+            else if(gameState == GameState.Game) {
+                player.Update();
+            }
 
             base.Update(gameTime);
         }
