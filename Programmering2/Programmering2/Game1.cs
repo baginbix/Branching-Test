@@ -105,10 +105,7 @@ namespace Programmering2
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            foreach (var item in objekt)
-            {
-                item.Draw(spriteBatch);
-            }
+            objekt[0].Draw(spriteBatch);
             spriteBatch.End();
             // TODO: Add your drawing code here
 
